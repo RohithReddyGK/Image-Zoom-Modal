@@ -54,7 +54,7 @@ Simply open `index.html` in any modern web browser.
 ## 🖼️ Screenshot
 
 ### Image Preview
-<img src="https://github.com/user-attachments/assets/00ff1b0f-96f0-4afc-8a2e-0bb1e6d5c345" alt="Image Preview" width="700" height="450"/>
+<img src="https://github.com/user-attachments/assets/00ff1b0f-96f0-4afc-8a2e-0bb1e6d5c345" alt="Image Preview" width="750" height="450"/>
 
 ---
 
