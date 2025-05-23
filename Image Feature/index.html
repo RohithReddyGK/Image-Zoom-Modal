@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Zoom/Preview Feature</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+            background-color: azure;
+            flex-direction: column;
+            padding: 30px;
+        }
+
+        .instruction {
+            font-size: 18px;
+            color: gray;
+            margin-bottom: 145px;
+            font-size: xx-large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .zoom-click-img {
+            width: 500px;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            cursor: zoom-in;
+            border: 5px solid yellow;
+        }
+
+        .zoom-click-img:hover {
+            transform: scale(2);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            position: relative;
+        }
+
+        .modal-img {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 20px;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: red;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="font-size: 50px; color: #1d3557; margin-bottom: 10px;">
+        Image Zoom/Preview Feature
+    </h1>
+
+    <p class="instruction">
+        Move your cursor over the image to zoom in, and click on it to view in fullscreen.
+    </p>
+
+    <!-- Hover + Click Image -->
+    <img src="Images/Full Stack Developer.png" alt="Hover and Click to Preview" class="zoom-click-img"
+        onclick="openModal()" />
+
+    <!-- Modal Preview -->
+    <div id="imageModal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal(event)">x</button>
+            <img src="Images/Full Stack Developer.png" alt="Full Preview" class="modal-img" />
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("imageModal");
+
+        function openModal() {
+            modal.style.display = "flex";
+        }
+
+        function closeModal(event) {
+            if (event.target.classList.contains("modal") || event.target.classList.contains("close-btn")) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
