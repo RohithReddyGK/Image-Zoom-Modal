@@ -59,7 +59,7 @@ Simply open `index.html` in any modern web browser.
 ---
 
 ### Netlify Badge
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5f5425c8-a6e7-4ca6-8512-3be05d940372/deploy-status)](https://app.netlify.com/projects/ai-fields-theme-toggle/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a91769eb-7fce-4e9f-9313-b5b7fa94da7f/deploy-status)](https://app.netlify.com/projects/zoom-view/deploys)
 
 ---
 
